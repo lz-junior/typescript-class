@@ -28,4 +28,28 @@ a = "teste"
 a = true
 a = 39
 
-// teste de commit!!!
+// union type
+let id: string | number = "10"
+id = 200
+
+// type alias
+type myIdType = string | number
+const productId: myIdType = "00027"
+const userId: myIdType = 10
+
+// type enum
+enum Size {
+  P = "Pequeno",
+  M = "Medio",
+  G = "Grande",
+}
+const camisa = {
+  name: "Camisa gola V",
+  tamanho: Size.G,
+}
+
+// literal types
+let test: "autenticado" | null;
+
+test = "autenticado"
+test = null
