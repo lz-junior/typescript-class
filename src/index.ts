@@ -76,3 +76,34 @@ function greeting(name: string, greet?: string) {
 }
 greeting("Junior")
 greeting("Carlos", "Mr.")
+
+// interfaces
+interface MathFunctionParams {
+  n1: number,
+  n2: number,
+}
+
+function sumNumbers(nums: MathFunctionParams) {
+  return nums.n1 + nums.n2
+}
+
+console.log(sumNumbers({n1:1, n2:2}))
+
+const someNumbers: MathFunctionParams = {
+  n1: 5, 
+  n2: 20,
+}
+console.log(sumNumbers(someNumbers))
+
+// narrowing
+// chegagem de tipos
+function doSomething(info: number | boolean) {
+  if (typeof info === "number") {
+    console.log(`O número é ${info}`);
+    return
+  }
+  console.log("Não foi passado nenhum número")
+}
+
+doSomething(5);
+doSomething(true);
