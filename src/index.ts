@@ -53,3 +53,26 @@ let test: "autenticado" | null;
 
 test = "autenticado"
 test = null
+
+// funções
+function soma(a:number, b:number) {
+  return a + b
+}
+
+function sayHello(name: string): string {
+  return `Hello ${name}`
+}
+
+function logger(msg: string): void {
+  console.log(msg)
+}
+
+function greeting(name: string, greet?: string) {
+  if(greet){
+    console.log(`Olá ${greet} ${name}`);
+    return;
+  }
+  console.log(`Olá ${name}`)
+}
+greeting("Junior")
+greeting("Carlos", "Mr.")
