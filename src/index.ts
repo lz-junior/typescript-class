@@ -247,3 +247,17 @@ const usuario: User = {
 }
 
 console.log(pickProperty(usuario, 'age'))
+
+// convertendo variavel em type
+const video = {
+  title: 'Como fazer frango',
+  duration: 128,
+}
+
+
+type Video = keyof typeof video
+
+// Utility Types
+type pickPropertyReturnType = ReturnType<typeof pickProperty>
+type UserWithoutAddress = Omit<User, 'address' | 'name'>
+type UserNameAndAge = Pick<User, 'name' | 'age'>
