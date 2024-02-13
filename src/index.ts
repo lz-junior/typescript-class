@@ -261,3 +261,15 @@ type Video = keyof typeof video
 type pickPropertyReturnType = ReturnType<typeof pickProperty>
 type UserWithoutAddress = Omit<User, 'address' | 'name'>
 type UserNameAndAge = Pick<User, 'name' | 'age'>
+type UserPartial = Partial<User>
+
+
+// -----------------------------
+type DbConfig = {
+  name: string
+  url: string
+}
+
+const conn1 = { name: 'postgres', url: 'postgres://user:password' } as DbConfig
+const conn2: DbConfig = { name: 'mysql', url: 'mysql://user:password' }
+const conn3 = { name: 'sqlite', url: 'sqlite://user:password' } satisfies DbConfig
